@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Art</title>
+    <link rel="stylesheet" href="css/oyun.css">
+
+
+    <style>
+        #display_image {
+            background-image: url('puzzleimg/puzzleimg.png');
+        }
+
+        #piece0 {
+            background-image: url('parcalar/part_0.png');
+        }
+
+        #piece1 {
+            background-image: url('parcalar/part_1.png');
+        }
+
+        #piece2 {
+            background-image: url('parcalar/part_2.png');
+        }
+
+        #piece3 {
+            background-image: url('parcalar/part_3.png');
+        }
+
+        #piece4 {
+            background-image: url('parcalar/part_4.png');
+        }
+
+        #piece5 {
+            background-image: url('parcalar/part_5.png');
+        }
+
+        #piece6 {
+            background-image: url('parcalar/part_6.png');
+        }
+
+        #piece7 {
+            background-image: url('parcalar/part_7.png');
+        }
+
+        #piece8 {
+            background-image: url('parcalar/part_8.png');
+        }
+
+        #piece9 {
+            background-image: url('parcalar/part_9.png');
+        }
+
+        #piece10 {
+            background-image: url('parcalar/part_10.png');
+        }
+
+        #piece11 {
+            background-image: url('parcalar/part_11.png');
+        }
+
+        #piece12 {
+            background-image: url('parcalar/part_12.png');
+        }
+
+        #piece13 {
+            background-image: url('parcalar/part_13.png');
+        }
+
+        #piece14 {
+            background-image: url('parcalar/part_14.png');
+        }
+
+        #piece15 {
+            background-image: url('parcalar/part_15.png');
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="/">Geri</a>
+
+        <div class="game-title">
+            <span class="game-title__text">Puzzle ART</span>
+        </div>
+
+        <div class="scores">
+            <label for="">Hamle Sayısı :</label>
+            <label id="moveCountDisplay" for=""></label>
+            <span class="input-space"></span>
+
+            <label for="">Score :</label>
+            <label id="scoreDisplay" for=""></label>
+            <span class="input-space"></span>
+
+            <label for="">High Score :</label>
+            <label for=""></label>
+
+
+        </div>
+
+    </header>
+
+
+    <main>
+        <section>
+            <div class="foto_yukle">
+                <form action="/image" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="image_input">Resim Seçin:</label>
+                        <span class="input-space"></span>
+                        <input type="file" id="image_input" name="upload" accept="image/png, image/jpg">
+                        <input type="submit" id="submit_button" name="submit_button" value="Yükle" disabled>
+                    </div>
+
+                </form>
+            </div>
+            <br> <br>
+            <div id="display_image"></div>
+        </section>
+
+
+        <aside>
+            <div id="puzzle">
+                <div class="row">
+                    <button id="piece0" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece1" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece2" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece3" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                </div>
+                <div class="row">
+                    <button id="piece4" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece5" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece6" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece7" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                </div>
+                <div class="row">
+                    <button id="piece8" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece9" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece10" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece11" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                </div>
+                <div class="row">
+                    <button id="piece12" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece13" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece14" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                    <button id="piece15" class="btn" class="btn" style="width:80px; height:80px;">
+                    </button>
+                </div>
+            </div>
+
+
+            <button class="karistir_btn" id="shuffle"><b>Karıştır</b></button>
+        </aside>
+    </main>
+
+    <footer id="footer">
+        <div id="footer1">
+            <p><b> Tuba Pınar ALATAŞ / 201307064 </b></p>
+            <p><b> Can Ata TEKİRDAĞLI / 201307032</b></p>
+            <p><b>Kartal Yağız DEVECİ / 171301020 </b> </p>
+        </div>
+        <div id="footer2">
+            <p>Kocaeli Üniveristesi/Bilişim Sistemleri Mühendisliği</p>
+            <p style="text-align: center;">Yazılım geliştirme Labaratuvarı II</p>
+            <p style="text-align: center;">2022-2023 Bahar</p>
+        </div>
+    </footer>
+
+    <div id="myModal">
+        <div id="popup">
+            <form method="post" action="/kullanici-adi-kaydet">
+                <h1>Tebrikler oyunu bitirdiniz!</h1>
+                <br><br><br>
+                <h2>Lütfen adınızı girin:</h2>
+                <input type="text" id="kullanici_adi" name="kullanici_adi" maxlength="10" style="font-size: 2rem;" />
+                <br>
+                <button id="kaydet_btn" onclick="hidePopup()">KAYDET</button>
+                
+            </form>
+        </div>
+    </div>
+ 
+
+</body>
+<script src="js/oyun.js"></script>
+
+</html>
